@@ -196,15 +196,27 @@
 
   // Event listener para los botones de "Agregar al carrito"
   const botonesAgregarCarrito = document.querySelectorAll(".boton-agregar-carrito");
-  botonesAgregarCarrito.forEach(boton => {
-    boton.addEventListener("click", (e) => {
-      const productoId = e.currentTarget.dataset.id;
-      const productoSeleccionado = productos.find(producto => producto.id === productoId);
-      if (productoSeleccionado) {
-        agregarAlCarrito(productoSeleccionado);
-      }
-    });
+botonesAgregarCarrito.forEach(boton => {
+  boton.addEventListener("click", (e) => {
+    const productoId = e.currentTarget.dataset.id;
+    const productoSeleccionado = productos.find(producto => producto.id === productoId);
+    if (productoSeleccionado) {
+      agregarAlCarrito(productoSeleccionado);
+    }
   });
+});
+// Event listener para el contenedor de productos utilizando event delegation
+contenedorProductos.addEventListener("click", function (event) {
+  const botonAgregar = event.target.closest(".boton-agregar-carrito");
+  if (botonAgregar) {
+    const productoId = botonAgregar.dataset.id;
+    const productoSeleccionado = productos.find(producto => producto.id === productoId);
+    if (productoSeleccionado) {
+      agregarAlCarrito(productoSeleccionado);
+    }
+  }
+});
+
 
   // Event listener para el botón "Limpiar carrito"
   botonLimpiarCarrito.addEventListener("click", function () {

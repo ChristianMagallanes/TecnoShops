@@ -130,13 +130,7 @@ main{
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
 }
-.boton-agregar-carrio{
-  font-size: 24px;
-  background-color: rgba(255, 255, 255, 0.842);
-  color: #000000;
-  border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
-}
+
 
 .CarritoContent{
   display: flex;
@@ -145,7 +139,11 @@ main{
 #carrito {
   /* Estilos del carrito cuando está cerrado */
   margin-right: 10px;
-  background-color: rgb(243, 243, 243);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(206, 208, 212, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(253, 253, 253, 0.125);
   border: #000 solid 2px;
   border-radius: 10px ;
   padding:20px;
