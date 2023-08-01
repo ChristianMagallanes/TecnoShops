@@ -226,12 +226,13 @@ contenedorProductos.addEventListener("click", function (event) {
   });
 
   // Event listener para el botón "Comprar"
-botonComprar.addEventListener("click", function () {
-  const precioTotal = calcularPrecioTotal();
-  const rutaActual = window.location.href;
-  const rutaPaginaPagar = rutaActual.replace("index.html", "pages/pagar.html") + "?total=" + precioTotal;
-  window.location.href = rutaPaginaPagar;
-});
+    botonComprar.addEventListener("click", function () {
+    const precioTotal = calcularPrecioTotal();
+    const rutaActual = new URL(window.location.href);
+    const rutaPaginaPagar = new URL("pages/pagar.html", rutaActual);
+    rutaPaginaPagar.searchParams.set("total", precioTotal);
+    window.location.href = rutaPaginaPagar.href;
+  });
 
   // Event listener para el botón "Desplegar carrito"
   botonDesplegarCarrito.addEventListener("click", function () {
