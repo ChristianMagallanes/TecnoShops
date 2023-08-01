@@ -196,7 +196,7 @@
 
   // Event listener para los botones de "Agregar al carrito"
   const botonesAgregarCarrito = document.querySelectorAll(".boton-agregar-carrito");
-botonesAgregarCarrito.forEach(boton => {
+  botonesAgregarCarrito.forEach(boton => {
   boton.addEventListener("click", (e) => {
     const productoId = e.currentTarget.dataset.id;
     const productoSeleccionado = productos.find(producto => producto.id === productoId);

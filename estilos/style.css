@@ -57,7 +57,7 @@
     border-radius: 10px 0px 10px;
   }
   
-  /* Agrega los estilos para el contenido principal del main */
+  
   #contenidoPrincipal {
     display: none;
   }
@@ -106,7 +106,7 @@ main{
     display: flex;
     flex-direction: column;
 }
-/*aside*/
+/*Filtro*/
 .filtro{
     display: flex; 
     width: 100%;
@@ -121,7 +121,7 @@ main{
 .boton-categoria.active {
   background-color: rgb(0, 0, 0);
   color: #fff;
-  /* Otros estilos que desees aplicar */
+  
 }
 .boton-categoria{
     font-size: 24px;
@@ -155,15 +155,15 @@ main{
 }
 /* Estilos del carrito cuando está abierto */
 #carrito.carrito-navbar-abierto {
-  display: flex; /* Cambia a flex para mostrar el carrito */
+  display: flex; 
   position:fixed;
   right: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 350px;
-  max-height: 800px; /* Ajusta la altura máxima según el contenido del carrito */
-  overflow: auto; /* Agrega desplazamiento si el contenido excede la altura máxima */
+  max-height: 800px; 
+  overflow: auto; 
   transition: max-height 0.3s ease-in;
   z-index: 1;
   
@@ -180,7 +180,7 @@ main{
 .carrito-navbar-abierto {
   display: block;
   background-color: #fff;
-  max-height: 800px; /* Ajusta la altura máxima según el contenido del carrito */
-  overflow: auto; /* Agrega desplazamiento si el contenido excede la altura máxima */
+  max-height: 800px; 
+  overflow: auto; 
   transition: max-height 0.3s ease-in;
 }
