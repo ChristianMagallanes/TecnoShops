@@ -1,0 +1,3 @@
+Este proyecto es solo un prototipo y no se conecta a una pasarela de pago real.
+Los datos ingresados en el formulario de tarjeta de crédito no serán procesados, ya que no hay un backend real en funcionamiento.
+El carrito de compra se almacena temporalmente en el navegador del usuario utilizando LocalStorage, pero si se borran los datos del navegador, el carrito se restablecerá.

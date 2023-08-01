@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+.navbar{
+  border-radius: 20px;
+  flex-direction: column;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(214, 211, 211, 0.125);
+  font-family: 'Poppins', sans-serif;
+ 
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 100vh;
+  }
+  #enviarBoton{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  #enviarBoton:hover{
+    background-color: #00000085;
+    color: #fff;
+    border: solid red 2px;
+  }
+  .ingresa{
+    padding: 20px;
+  }
+  .inicio input {
+    text-align: center;
+    font-size: 30px;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+  }
+  .bienvenido{
+    color: #000000;
+    background-color: #fffcfc;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  #nombreUsuario{
+    color: #e9e0e0;
+    background-color: #000000;
+    padding: 5px;
+    border-radius: 10px 0px 10px;
+  }
+  
+  /* Agrega los estilos para el contenido principal del main */
+  #contenidoPrincipal {
+    display: none;
+  }
+body{
+    background-image: url(../assets/fondo1.jpg);
+    
+    background-attachment: fixed;
+}
+#contenedor-productos{
+  margin: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.producto{
+    text-align: center;
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+   
+}
+.producto-imagen{
+    height: 100%;
+}
+.producto-titulo {
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Poppins', sans-serif;
+}
+.producto-detalles{
+    color: #fff;
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+/*aside*/
+.filtro{
+    display: flex; 
+    width: 100%;
+}
+.filtro ul{
+  
+    list-style: none;
+    gap: 20px;
+    display: flex;
+}
+
+.boton-categoria.active {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  /* Otros estilos que desees aplicar */
+}
+.boton-categoria{
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.842);
+    color: #000000;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+.boton-agregar-carrio{
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.842);
+  color: #000000;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.CarritoContent{
+  display: flex;
+  justify-content: space-between;
+}
+#carrito {
+  /* Estilos del carrito cuando está cerrado */
+  margin-right: 10px;
+  background-color: rgb(243, 243, 243);
+  border: #000 solid 2px;
+  border-radius: 10px ;
+  padding:20px;
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  font-family: 'Poppins', sans-serif;
+}
+/* Estilos del carrito cuando está abierto */
+#carrito.carrito-navbar-abierto {
+  display: flex; /* Cambia a flex para mostrar el carrito */
+  position:fixed;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  max-height: 800px; /* Ajusta la altura máxima según el contenido del carrito */
+  overflow: auto; /* Agrega desplazamiento si el contenido excede la altura máxima */
+  transition: max-height 0.3s ease-in;
+  z-index: 1;
+  
+}
+/* Estilos del carrito cuando está cerrado */
+.carrito-navbar-cerrado {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Estilos del carrito cuando está abierto */
+.carrito-navbar-abierto {
+  display: block;
+  background-color: #fff;
+  max-height: 800px; /* Ajusta la altura máxima según el contenido del carrito */
+  overflow: auto; /* Agrega desplazamiento si el contenido excede la altura máxima */
+  transition: max-height 0.3s ease-in;
+}
