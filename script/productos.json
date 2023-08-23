@@ -1,0 +1,46 @@
+[
+  {
+    "id": "pc1",
+    "titulo": "PC Gamer 1",
+    "imagen": "./assets/pc1.png",
+    "categoria": {
+      "nombre": "Computadoras",
+      "id": "escritorio"
+    },
+    "detalles": "PC Gamer de alta gama",
+    "precio": 1200
+  },
+  {
+    "id": "pc2",
+    "titulo": "PC Gamer 2",
+    "imagen": "./assets/pc2.png",
+    "categoria": {
+      "nombre": "Computadoras",
+      "id": "escritorio"
+    },
+    "detalles": "PC Gamer de alta gama",
+    "precio": 12000
+  },
+  {
+    "id": "laptop1",
+    "titulo": "Laptop 1",
+    "imagen": "./assets/laptop1.webp",
+    "categoria": {
+      "nombre": "Computadoras",
+      "id": "laptop"
+    },
+    "detalles": "Laptop Gamer de alta gama",
+    "precio": 9200
+  },
+  {
+    "id": "laptop2",
+    "titulo": "Laptop 2",
+    "imagen": "./assets/laptop2.png",
+    "categoria": {
+      "nombre": "Computadoras",
+      "id": "laptop"
+    },
+    "detalles": "Laptop Gamer de alta gama",
+    "precio": 6200
+  }
+]

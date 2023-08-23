@@ -27,6 +27,14 @@
     border-radius: 10px;
     margin-top: 10px;
   }
+  .boton-agregar-carrito{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
   #enviarBoton:hover{
     background-color: #00000085;
     color: #fff;
@@ -183,4 +191,25 @@ main{
   max-height: 800px; 
   overflow: auto; 
   transition: max-height 0.3s ease-in;
+}
+.Dolar {
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Title{
+  font-size: 50px;
+}
+.Compra{
+  font-size: 28px;
+}
+.Venta{
+  font-size: 28px;
 }

@@ -1,50 +1,12 @@
-  // Productos disponibles
-  const productos = [
-    {
-      id: "pc1",
-      titulo: "PC Gamer 1",
-      imagen: "./assets/pc1.png",
-      categoria: {
-        nombre: "Computadoras",
-        id: "escritorio",
-      },
-      detalles: "PC Gamer de alta gama",
-      precio: 1200,
-    },
-    {
-      id: "pc2",
-      titulo: "PC Gamer 2",
-      imagen: "./assets/pc2.png",
-      categoria: {
-        nombre: "Computadoras",
-        id: "escritorio",
-      },
-      detalles: "PC Gamer de alta gama",
-      precio: 12000,
-    },
-    {
-      id: "laptop1",
-      titulo: "Laptop 1",
-      imagen: "./assets/laptop1.webp",
-      categoria: {
-        nombre: "Computadoras",
-        id: "laptop",
-      },
-      detalles: "Laptop Gamer de alta gama",
-      precio: 9200,
-    },
-    {
-      id: "laptop2",
-      titulo: "Laptop 2",
-      imagen: "./assets/laptop2.png",
-      categoria: {
-        nombre: "Computadoras",
-        id: "laptop",
-      },
-      detalles: "Laptop Gamer de alta gama",
-      precio: 6200,
-    },
-  ];
+  // Productos disponibles cargados desde el productos.json
+  let productos = [];
+
+  fetch("./script/productos.json")
+  .then(response => response.json())
+  .then(data => {
+    productos = data;
+    cargarProductos(productos);
+  })
 
   // Obtener elementos del DOM
   const contenedorProductos = document.querySelector("#contenedor-productos");
@@ -82,7 +44,7 @@
   }
 
   // Cargar los productos iniciales
-  cargarProductos(productos);
+  
 
   // Función para filtrar productos por categoría
   function filtrarProductos(productos, filtro) {
@@ -218,12 +180,35 @@ contenedorProductos.addEventListener("click", function (event) {
 });
 
 
-  // Event listener para el botón "Limpiar carrito"
-  botonLimpiarCarrito.addEventListener("click", function () {
-    carrito = [];
-    actualizarCarrito();
-    guardarCarritoEnLocalStorage();
+// Event listener para el botón "Limpiar carrito"
+botonLimpiarCarrito.addEventListener("click", function () {
+  // Usar SweetAlert2 para mostrar una confirmación antes de limpiar el carrito
+  Swal.fire({
+    title: "¿Estás seguro?",
+    html: '<span style="color: white;">Esta acción eliminará todos los productos del carrito</span>',
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Sí, limpiar carrito",
+    cancelButtonText: "Cancelar",
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Si el usuario confirma, proceder a limpiar el carrito
+      carrito = [];
+      actualizarCarrito();
+      guardarCarritoEnLocalStorage();
+
+      Swal.fire({
+        title: "Carrito limpiado",
+        html: '<span style="color: white;">El carrito ha sido limpiado exitosamente</span>',
+        icon: "success",
+       
+      });
+    }
   });
+});
+  
 
   // Event listener para el botón "Comprar"
     botonComprar.addEventListener("click", function () {
