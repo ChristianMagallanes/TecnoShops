@@ -19,7 +19,7 @@
       "id": "escritorio"
     },
     "detalles": "PC Gamer de alta gama",
-    "precio": 12000
+    "precio": 2500
   },
   {
     "id": "laptop1",
@@ -30,7 +30,7 @@
       "id": "laptop"
     },
     "detalles": "Laptop Gamer de alta gama",
-    "precio": 9200
+    "precio": 1800
   },
   {
     "id": "laptop2",
@@ -41,6 +41,6 @@
       "id": "laptop"
     },
     "detalles": "Laptop Gamer de alta gama",
-    "precio": 6200
+    "precio": 1500
   }
 ]

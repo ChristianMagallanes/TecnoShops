@@ -192,24 +192,46 @@ main{
   overflow: auto; 
   transition: max-height 0.3s ease-in;
 }
-.Dolar {
-  height: 200px;
+.FlechaV{
   display: flex;
+  flex-direction: column;
+}
+.Titlee{
+  font-size: 40px;
+  color: #ffffff;
+  border-bottom: 2px solid;
+  font-family: 'Poppins', sans-serif;
+}
+.Dolar {
+  height: 400px;
+  display: flex;
+  
   justify-content: space-around;
   align-items: center;
   gap: 50px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.315);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-
+#compra-oficial{
+  font-family: 'Poppins', sans-serif;
+  color: rgb(0, 0, 0);
+}
+.flecha{
+  height: 250px;
+}
 .Title{
   font-size: 50px;
+  color: rgb(0, 0, 0);
 }
 .Compra{
   font-size: 28px;
+  color: rgb(0, 0, 0);
+  font-family: 'Poppins', sans-serif;
 }
 .Venta{
   font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(0, 0, 0);
 }

@@ -1,4 +1,4 @@
-// Fetch para el Dólar Oficial
+// Fetch para el Dólar Oficial mediante una api
 fetch("https://dolarapi.com/v1/dolares/oficial")
   .then(response => response.json())
   .then(data => {
