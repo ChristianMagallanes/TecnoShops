@@ -83,8 +83,8 @@ body{
 }
 .producto{
     text-align: center;
-    height: 20rem;
-    width: 20rem;
+    height: 30rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
